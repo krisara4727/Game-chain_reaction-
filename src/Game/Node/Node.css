@@ -1,0 +1,126 @@
+.node {
+    height: 25px;
+    width: 30px;
+    outline: 1px solid rgb(175,216,248);
+    display: inline-block;
+}
+#point1{
+    width:10px;
+    height:8px;
+    border-radius: 50%;
+    background: red;
+    position: relative;
+    top: 5%;
+    left: 30%;
+    animation: jump 2s infinite;
+}
+#point2{
+    width:10px;
+    height:8px;
+    border-radius: 50%;
+    background: green;
+    position: relative;
+    top: 5%;
+    left: 30%;
+    animation: jump 2s infinite;
+}
+#point3{
+    width:10px;
+    height:8px;
+    border-radius: 50%;
+    background: blue;
+    position: relative;
+    top: 5%;
+    left: 30%;
+    animation: jump 2s infinite;
+}
+#point4{
+    width:10px;
+    height:8px;
+    border-radius: 50%;
+    background:yellow;
+    position: relative;
+    top: 5%;
+    left: 30%;
+    animation: jump 2s infinite;
+}
+@keyframes jump{
+    0%{
+        
+    }
+    25%{
+        transform: rotateY(90deg) ;
+      
+    }
+    50%{
+        transform: rotateY(180deg) ;
+        
+    }
+    75%{
+        transform: rotateY(270deg) ;
+        
+    }
+    100%{
+        transform: rotateY(359deg);
+        
+    }
+}
+.split {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes shortestPath {
+    0% {
+      transform: scale(0.6);
+      background-color: #ebf7f7;
+    }
+  
+    50% {
+      transform: scale(1.2);
+      background-color: #ebf7f7;
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: #ebf7f7;
+    }
+  }
+
+  .node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  @keyframes visitedAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: rgba(0, 0, 66, 0.75);
+      border-radius: 100%;
+    }
+  
+    50% {
+      background-color: rgba(17, 104, 217, 0.75);
+    }
+  
+    75% {
+      transform: scale(1.2);
+      background-color: rgba(0, 217, 159, 0.75);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(0, 190, 218, 0.75);
+    }
+  }
